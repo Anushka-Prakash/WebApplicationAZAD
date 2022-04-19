@@ -1,0 +1,50 @@
+﻿  
+@model IEnumerable<sqlWebapp.Models.Person>
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">This is a list of services of courses</h1>
+
+</div>
+
+<div>
+    <table class="table" table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Person ID</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">City</th>                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model)
+            {
+        <tr>
+            <th scope="row">@course.PersonID</th>
+            <td>@course.LastName</td>
+            <td>@course.City</td>
+        </tr>
+            }            
+        </tbody>
+    </table>
+</div>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
